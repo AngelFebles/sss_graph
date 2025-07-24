@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <title>Family Cost Visualiser</title>
+  <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+     <div class="graph-panel"> 
+  <h1>Family Cost Calculator</h1>
+   
+
+   
+  <form id="family-form">
+    <label>Adults: <input type="number" id="adults" value="1" min="1"></label><br>
+    <label>Infants: <input type="number" id="infants" value="0" min="0"></label><br>
+    <label>Preschoolers: <input type="number" id="preschoolers" value="0" min="0"></label><br>
+    <label>Schoolagers: <input type="number" id="schoolagers" value="0" min="0"></label><br>
+    <label>Teenagers: <input type="number" id="teenagers" value="0" min="0"></label><br>
+
+    <label>Housing Type:
+      <select id="housing">
+        <option value="Efficiency">Efficiency</option>
+        <option value="One_Bedroom">1-Bedroom</option>
+        <option value="Two_Bedroom">2-Bedroom</option>
+        <option value="Three_Bedroom">3-Bedroom</option>
+        <option value="Four_Bedroom">4-Bedroom</option>
+      </select>
+    </label><br>
+
+    <label>Food Plan:
+      <select id="food_plan">
+        <option value="Thrifty">Thrifty</option>
+        <option value="Low">Low</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Liberal">Liberal</option>
+      </select>
+    </label><br>
+
+    <button type="button" onclick="make_table()">Generate Graph</button>
+  </form>
+   </div>
+
+<div class="graph">
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="static/script.js"></script>
+  
+</body>
+</html>
